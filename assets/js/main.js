@@ -126,6 +126,12 @@
   if (typed) {
     let typed_strings = typed.getAttribute('data-typed-items')
     typed_strings = typed_strings.split(',')
+    let width = screen.width;
+    console.log(width)
+    if (width<=768) {
+      typed_strings[0] = "Mathematics <br> Teacher"
+      console.log("DONE BREAKING!")
+    }
     new Typed('.typed', {
       strings: typed_strings,
       loop: true,
